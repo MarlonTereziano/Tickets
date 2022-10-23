@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'RimousySb-Regular';
+    src: url('./assets/fonts/RimousySb-Regular.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Rimouski';
+    src: url('./assets/fonts/rimouski-light.ttf') format('truetype');
+}
+
+* { 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Rimouski,RimousySb-Regular,'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+}
