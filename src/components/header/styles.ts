@@ -8,24 +8,33 @@ export const Container = styled.div`
   flex-direction: row;
   padding: 1rem 3rem 1rem 3rem;
   background-color: #131517;
+  a{
+    width: 10rem;
+  }
   img {
     width: 10rem;
   }
 `;
+
 export const AreaButtons = styled.div`
   display: flex;
   justify-content: space-between;
   height: 3rem;
-  width: 15rem;
-  button{
-    z-index: 999;
+  width: 13rem;
+  button {
     color: white;
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     background-color: transparent;
+    border: 1px solid white;
     width: 7rem;
   }
-  button:hover {
-    z-index: 999;
-    cursor: pointer;
+  .signIn {
+    border:none;
+  }
+  .signUp:hover {
+    background-color: #ff06bf;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
   }
 `;

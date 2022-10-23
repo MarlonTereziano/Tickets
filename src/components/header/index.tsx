@@ -4,10 +4,12 @@ import logo from "../../assets/images/logo.png";
 export const Header = () => {
   return (
     <Container>
-      <img src={logo} alt="Logo MB.Tickets" />
+      <a href="/">
+        <img src={logo} alt="Logo MB.Tickets" />
+      </a>
       <AreaButtons>
-        <button>Cadastre-se</button>
-        <button>Login</button>
+        <button className="signIn">Login</button>
+        <button className="signUp">Cadastre-se</button>
       </AreaButtons>
     </Container>
   );
