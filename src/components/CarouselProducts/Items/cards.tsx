@@ -1,7 +1,14 @@
 //Styles
-import { Container } from "./styles";
+import { Container, ContainerDescription } from "./styles";
 
-import { useEvents } from "../../../hooks/events";
+//Hooks
+// import { useEvents } from "../../../hooks/events";
+
+//React Hooks
+import { useState, useEffect } from "react";
+
+//import Api
+import api from "../../../services/api";
 
 //Interfaces
 interface Props {
@@ -9,18 +16,33 @@ interface Props {
 }
 
 export function Card({ numCard }: Props) {
-  const { getEvents, events } = useEvents();
+  const [event, setEvent] = useState("");
 
-  const listEvents = () => {
-    console.log("entrou");
-    getEvents();
-    console.log(events[0]);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await api.get("/events");
+      setEvent(response.data[numCard].image);
+    };
+    fetchData();
+    console.log(event);
+  }, [event, numCard]);
 
   return (
-    <>
-      <Container></Container>
-      <button onClick={listEvents}>aaaaaaaaaaaaa</button>
-    </>
+    <Container>
+      <img src={event} alt="Evento" />
+      <ContainerDescription>
+        <h3>SAB, 12 NOV - 16:00</h3>
+        <br />
+        <h2 className="descriptionEvent">
+          Festival MPBoca 2022 | Liniker, Johnny Hooker, Céu, Tulipa Ruiz e
+          muito mais!
+        </h2>
+        <br />
+        <h4>Local</h4>
+        <br />
+        <br />
+        <button>VER DETALHES</button>
+      </ContainerDescription>
+    </Container>
   );
 }

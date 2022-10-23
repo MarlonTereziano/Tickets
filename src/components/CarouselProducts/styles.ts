@@ -35,7 +35,7 @@ export const ProductsContainer = styled.div`
   }
 
   .rec.rec-arrow:hover {
-    color: black;
+    color: white;
   }
 
   .rec-carousel-item:focus {
@@ -49,6 +49,7 @@ export const ProductsContainer = styled.div`
 
   .sc-ftTHYK.grqFvW.rec.rec-dot{
     background-color: transparent;
+    border: 1px solid grey;
   }
 
   .sc-ftTHYK.grqFvW.rec.rec-dot:hover{
@@ -57,7 +58,7 @@ export const ProductsContainer = styled.div`
   }
 
   .sc-ftTHYK.hHFSRh.rec.rec-dot.rec.rec-dot_active{
-    background-color: white;
+    background-color: grey;
     box-shadow: none;
   }
 
@@ -67,5 +68,5 @@ export const Item = styled.div`
 border-radius: 1rem;
   display: flex;
   height: 20rem;
-  width: 100%;
+  width: 90%;
 `;
