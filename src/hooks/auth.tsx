@@ -27,7 +27,7 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 const AuthProvider = ({ children }: AuthProviderProps) => {
   const [token, setToken] = useState("");
 
-  const signIn = useCallback(async ({ login, senha }) => {
+  const signIn = useCallback(async ({ login, senha }:any) => {
     const response = await api.post("/login", {
       login,
       senha,

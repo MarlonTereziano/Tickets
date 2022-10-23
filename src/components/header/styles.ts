@@ -32,7 +32,7 @@ export const AreaButtons = styled.div`
     border:none;
   }
   .signUp:hover {
-    background-color: #ff06bf;
+    background-color: #fb7312;
     text-decoration: none;
     border: none;
     font-weight: bold;
