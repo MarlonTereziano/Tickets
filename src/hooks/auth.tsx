@@ -41,7 +41,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 
   const signOut = useCallback(() => {
     localStorage.removeItem("@mbLabs:Login");
-    setToken("");
+    window.location.reload();
   }, []);
 
   const signUp = useCallback(

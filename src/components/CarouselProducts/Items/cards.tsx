@@ -1,8 +1,8 @@
 //Styles
 import { Container, ContainerDescription } from "./styles";
 
-//Hooks
-// import { useEvents } from "../../../hooks/events";
+//Antd
+import {message} from "antd";
 
 //React Hooks
 import { useState, useEffect } from "react";
@@ -16,30 +16,35 @@ interface Props {
 }
 
 export function Card({ numCard }: Props) {
-  const [event, setEvent] = useState("");
+  const [eventTitle, setEventTitle] = useState("");
+  const [eventImage, setEventImage] = useState("");
+  const [eventDate, setEventDate] = useState("");
+  const [eventPlace, setEventPlace] = useState("");
+  
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await api.get("/events");
-      setEvent(response.data[numCard].image);
+      setEventImage(response.data[numCard].image);
+      setEventTitle(response.data[numCard].title);
+      setEventDate(response.data[numCard].date);
+      setEventPlace(response.data[numCard].place);
     };
     fetchData();
-    console.log(event);
-  }, [event, numCard]);
+  }, []);
 
   return (
     <Container>
-      <img src={event} alt="Evento" />
+      <img src={eventImage} alt="Evento" />
       <ContainerDescription>
-        <h3>SAB, 12 NOV - 16:00</h3>
+        <h3>{eventDate}</h3>
         <br />
         <h2 className="descriptionEvent">
-          Festival MPBoca 2022 | Liniker, Johnny Hooker, Céu, Tulipa Ruiz e
-          muito mais!
+          {eventTitle}
         </h2>
-        <h4>Local</h4>
+        <h4>{eventPlace}</h4>
         <br/>
-        <button>VER DETALHES</button>
+        <button>Reservar</button>
       </ContainerDescription>
     </Container>
   );

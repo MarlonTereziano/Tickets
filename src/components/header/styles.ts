@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const Container = styled.div`
   width: 100vw;
   height: 5rem;
@@ -13,6 +14,27 @@ export const Container = styled.div`
   }
   img {
     width: 10rem;
+  }
+
+  h1{
+    margin-left: 40rem;
+    margin-top: 1rem;
+    color: white;
+  }
+  .logout{
+    color: white;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 1px solid white;
+    width: 7rem;
+    height: 2.5rem;
+  }
+  .logout:hover {
+    background-color: #fb7312;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
   }
 
 `;
