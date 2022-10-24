@@ -1,0 +1,64 @@
+.ant-modal {
+  background-color: #131517;
+}
+.ant-modal-header {
+  background-color: #131517;
+}
+.ant-modal-content{
+  background-color: transparent;
+}
+.ant-modal-title {
+  color: white;
+}
+.ant-modal-body {
+  display: flex;
+  justify-content: center;
+  background-color: #131517;
+}
+.ant-modal-footer {
+  display: none;
+}
+
+.ant-btn.ant-btn-primary {
+  width: 13rem;
+  background: linear-gradient(
+    90deg,
+    rgba(210, 10, 153, 1) 0%,
+    rgba(252, 49, 118, 1) 35%,
+    rgba(251, 115, 18, 1) 100%
+  );
+  border: none;
+  color: white;
+}
+
+.ant-btn.ant-btn-primary:hover {
+  transition: 0.3s;
+  filter: brightness(0.6);
+}
+
+.ant-modal-close-x {
+  color: white;
+}
+.ant-modal-close-x:hover {
+  filter: brightness(0.5);
+}
+.ant-popover-content {
+  background-color: #131517;
+  border-radius: 3rem;
+}
+.ant-popover-arrow-content::before {
+  background-color: white;
+}
+
+.ant-popover-inner {
+  background-color: white;
+  border-radius: 0.5rem;
+}
+.ant-popover-title {
+  color: black;
+}
+
+.ant-form.ant-form-horizontal{
+  margin-top: 0.6rem;
+  margin-bottom: -1rem;
+}

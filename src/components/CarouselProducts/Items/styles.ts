@@ -20,7 +20,7 @@ export const Container = styled.div`
 export const ContainerDescription = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1.4rem;
   width: 40%;
   height: 100%;
   overflow-y: auto;
@@ -55,7 +55,7 @@ export const ContainerDescription = styled.div`
 
   h2 {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: RimouskiBold;
     text-align: justify;
   }

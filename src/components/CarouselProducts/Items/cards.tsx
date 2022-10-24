@@ -37,10 +37,8 @@ export function Card({ numCard }: Props) {
           Festival MPBoca 2022 | Liniker, Johnny Hooker, Céu, Tulipa Ruiz e
           muito mais!
         </h2>
-        <br />
         <h4>Local</h4>
-        <br />
-        <br />
+        <br/>
         <button>VER DETALHES</button>
       </ContainerDescription>
     </Container>

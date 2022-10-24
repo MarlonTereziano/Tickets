@@ -14,6 +14,7 @@ export const Container = styled.div`
   img {
     width: 10rem;
   }
+
 `;
 
 export const AreaButtons = styled.div`
@@ -38,4 +39,7 @@ export const AreaButtons = styled.div`
     font-weight: bold;
     transition: 0.3s;
   }
+
 `;
+
+
