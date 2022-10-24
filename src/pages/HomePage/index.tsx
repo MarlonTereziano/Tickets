@@ -12,7 +12,7 @@ export const HomePage = () => {
           <CarouselProducts />
         </ContainerEvents>
         <ContainerEvents>
-          <h1>Eventos em destaque</h1>
+          <h1>Entretenimento</h1>
           <CarouselProducts />
         </ContainerEvents>
         <Footer>

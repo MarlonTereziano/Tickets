@@ -21,7 +21,6 @@ interface AuthContextData {
   signIn: (id: Number) => Promise<void>;
   signOut: () => void;
   signUp(credentials: IUserData): Promise<void>;
-  token: string;
 }
 
 interface AuthProviderProps {
@@ -31,7 +30,6 @@ interface AuthProviderProps {
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 const AuthProvider = ({ children }: AuthProviderProps) => {
-  const [token, setToken] = useState("");
 
   const signIn = useCallback(async (id:Number) => {
     const response = await api.get(`/users/${id}`);
@@ -75,7 +73,6 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         signIn,
         signOut,
         signUp,
-        token,
       }}
     >
       {children}
